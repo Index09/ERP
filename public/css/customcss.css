@@ -1,0 +1,47 @@
+* {
+    font-family: 'Cairo', sans-serif !important;
+
+}
+
+#app-sidebar {
+
+    font-weight: 500;
+    font-size: 50px !important;
+}
+
+body > div > div.page > div.page-main > div:nth-child(3) > div.app-sidebar.ps.ps__rtl > div.main-sidemenu > ul {
+
+    margin-top: 70px;
+}
+
+body > div > div.page > div.page-main > div:nth-child(3) > div.app-sidebar.ps.ps__rtl > div.side-header > a > img.header-brand-img.light-logo1 {
+
+    width: 130px;
+    margin-top: 56px;
+    margin-left: 30px;
+}
+
+.addp {
+    font-size: 2rem !important;
+}
+
+.logo {
+
+        width: 193px;
+        margin-bottom: 4px !important;
+        z-index: 23;
+    
+}
+
+.swal2-center{
+    z-index: 10 !important;
+}
+
+.ul-search {
+    
+     position: absolute;
+     margin-top: 38px;
+     margin-right: 7px;
+     z-index: 5;
+ 
+}
