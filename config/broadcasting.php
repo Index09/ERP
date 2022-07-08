@@ -16,6 +16,10 @@ return [
     */
 
     'default' => env('BROADCAST_DRIVER', 'null'),
+    'options' => [
+        'cluster' => 'eu',
+        'useTLS' => true
+      ],
 
     /*
     |--------------------------------------------------------------------------
@@ -39,6 +43,9 @@ return [
                 'cluster' => env('PUSHER_APP_CLUSTER'),
                 'useTLS' => true,
             ],
+
+            'cluster'=>'eu'
+
         ],
 
         'redis' => [

@@ -23,7 +23,7 @@
                             <tr v-for="(product,index) in products" :key=index>
                                 <td>
                                     <div class="text-center">
-                                        <img src="" alt="" class="cart-img text-center">
+                                        <img :src="'/images/products/' + product.picture" alt="" class="cart-img text-center">
                                     </div>
                                 </td>
                                 <td>{{product.name}}</td>

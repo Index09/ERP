@@ -7,7 +7,19 @@
 require('./bootstrap');
 
 import Vue from 'vue';
-Vue.use(require('vue-moment'));
+
+
+
+let moment = require("moment");
+moment.relativeTimeThreshold("s", 59);
+moment.relativeTimeThreshold("m", 59);
+moment.relativeTimeThreshold("h", 23);
+moment.relativeTimeThreshold("d", 28);
+moment.relativeTimeThreshold("M", 12);
+require("moment/locale/ar");
+Vue.use(require("vue-moment"), {
+    moment,
+});
 
 
 
@@ -51,6 +63,14 @@ Vue.component('invintories-component', require('./components/InvintoriesComponen
 Vue.component('sellorderwpay-component', require('./components/SellOrderwpayComponent.vue').default);
 
 Vue.component('pagination', require('laravel-vue-pagination'));
+
+
+
+// IncomeComponent 
+
+Vue.component('income-component', require('./components/IncomeComponent.vue').default);
+
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

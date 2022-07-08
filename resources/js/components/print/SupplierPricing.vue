@@ -197,7 +197,7 @@ export default {
 
         return {
 
-
+         
             x:50
         }
 

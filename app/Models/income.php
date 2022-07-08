@@ -11,7 +11,11 @@ class income extends Model
     protected $fillable = ['value','incometype_id','customer_id','orderpackage_id'];
     public function type(){
 
-        return $this->hasOne(incometype::class);
+        return $this->belongsTo(incometype::class,'incometype_id');
+
+    }
+    public function customer(){
+        return $this->belongsTo(customer::class);
     }
 }
 

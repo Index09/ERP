@@ -65,10 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- COL END -->
             </div>
-
-            <!-- ROW CLOSED -->    
         </div>
     
 

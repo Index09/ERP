@@ -75,9 +75,10 @@
                         </div>
                        
                     </div>
-                    
-
+           
+                
                     <div class="card-body card ">
+             
                           <div class="table-responsive ">
                             <table class="table border text-nowrap text-md-nowrap table-hover mb-0">
                                 <thead>
@@ -103,7 +104,7 @@
                             <div class="form-footer mt-2 align-items-center">
                             <div class="col-md-9 align-items-center">
                                 <button @click="savesellorder()" class="btn btn-primary">حفظ</button>
-                                <a href="/dashboard" class="btn btn-secondary">الرجوع</a>
+                                <a href="/home" class="btn btn-secondary">الرجوع</a>
                             </div>
                         </div>
                         </div>

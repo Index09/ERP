@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class Expenses extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('expenses', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+            $table->unsignedBigInteger('orderpackage_id')->unsigned();
+            $table->foreign('orderpackage_id')->references('id')->on('orderpackages')->ondelete('cascade')
+            ->onupdate('cascade');
+            $table->unsignedBigInteger('expense_id')->unsigned();
+            $table->foreign('expense_id')->references('id')->on('expensetypes')->ondelete('cascade')
+            ->onupdate('cascade');
+            $table->string('note');
+            $table->float('value');
+
+    });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+    }
+}

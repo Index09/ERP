@@ -1,13 +1,6 @@
 <?php
 
-use App\Models\customer;
-use App\Models\inventory_item;
-use App\Models\invintory;
-use App\Models\orderpackage;
 
-use App\Models\purshase;
-use App\Models\sellorder;
-use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -21,29 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-//Testing Route
-route::get('/',function(){
-    
-    
-
-    return orderpackage::with(['productsin'])->get();
-    return customer::paginate(2);
-    
-    return invintory::with(['inventory_items' => 
-    
-    function($d){
-
-        $d->with(['product']);
-    
-    }
-    
-    ])->get(); 
-        
-       
-
-
-
+Route::get('call', function () {
+  
+    event(new App\Events\test('hello','AASSDD'));
+    return;
+  
 });
+
+
+//Testing Route
 
 
 
@@ -110,7 +89,7 @@ Route::get('/sellorder/{id}', [App\Http\Controllers\SellorderController::class, 
 // Invintory 
 
 Route::get('/invintory', [App\Http\Controllers\InvintoryController::class, 'create'])->name('create');
-Route::post('/invintory_create', [App\Http\Controllers\InvintoryController::class, 'insert'])->name('insert');
+Route::post('/invintory', [App\Http\Controllers\InvintoryController::class, 'insert'])->name('insert');
 Route::get('/invintoriesview', [App\Http\Controllers\InvintoryController::class, 'invintoriesview'])->name('invintoriesview');
 Route::get('/getinvintories', [App\Http\Controllers\InvintoryController::class, 'getinvintories'])->name('getinvintories');
 Route::post('/invintory_delete', [App\Http\Controllers\InvintoryController::class, 'invintory_delete'])->name('invintory_delete');
@@ -120,7 +99,7 @@ Route::post('/invintory_delete', [App\Http\Controllers\InvintoryController::clas
 
 Route::get('/product', [App\Http\Controllers\ProductController::class, 'create'])->name('create');
 Route::get('/productsview', [App\Http\Controllers\ProductController::class, 'productsview'])->name('productsview');
-Route::post('/product_create', [App\Http\Controllers\ProductController::class, 'insert'])->name('insert');
+Route::post('/product', [App\Http\Controllers\ProductController::class, 'insert'])->name('insert');
 Route::get('/getproducts', [App\Http\Controllers\ProductController::class, 'getproducts'])->name('getproducts');
 Route::post('/product_delete', [App\Http\Controllers\ProductController::class, 'product_delete'])->name('product_delete');
 
@@ -153,3 +132,16 @@ Route::post('/dashbord/advertiser_create', [App\Http\Controllers\advertiserContr
 
 Route::get('/getsuppliers',[App\Http\Controllers\SupplierController::class, 'suppliers'])->name('suppliers');
 Route::get('/suppliers',[App\Http\Controllers\SupplierController::class, 'view'])->name('view');
+
+
+
+
+
+//Income 
+
+
+Route::get('/income',[App\Http\Controllers\IncomeController::class, 'index'])->name('index');
+Route::get('/incomes',[App\Http\Controllers\IncomeController::class, 'incomes'])->name('incomes');
+Route::get('/incomesdata',[App\Http\Controllers\IncomeController::class, 'incomesdata'])->name('incomesdata');
+
+

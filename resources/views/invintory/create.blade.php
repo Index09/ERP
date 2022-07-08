@@ -60,7 +60,7 @@ function addbrunch(){
 
 let data = {name:name,address:address,tax_number:tax_number}
 
-Insert(data,'/invintory_create')
+Insert(data,'/invintory')
 
 
 

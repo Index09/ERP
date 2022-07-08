@@ -17,7 +17,7 @@
                     <div class="chart-circle-value text-white">70%</div>
                 </div>
                 <div class="wrp text-wrapper text-white p-3">
-                    <p class="mt-0">{{auth()->user()->orderpackage->cash}}</p>
+                    <p class="mt-0">{{number_format(auth()->user()->orderpackage->cash)}}</p>
                     <p class="mt-1 mb-0">الرصيد                    <a  data-bs-effect="effect-scale" data-bs-toggle="modal" href="#modaldemo8" type="button" class="btn btn-icon  btn-primary"><i class="fe fe-plus"></i></a>
                     </p>
                 </div>
@@ -276,6 +276,22 @@
                 <div class="col-md-9">
                     <input id='password' type="password" class="form-control" placeholder="ادخل كلمه المرور">
                 </div>
+            </div>
+            <div  class="text-center modal-footer text-center">
+                <button onclick="addcash()" class=" text-center btn btn-primary">اضافه</button> <button class="btn btn-light" data-bs-dismiss="modal">الغاء</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modaldemo85">
+    <div class="modal-dialog modal-dialog-centered text-center" role="document">
+        <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+                <h6 class="modal-title">رساله</h6><button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <h3 id='msgbody1'></h3>
             </div>
             <div  class="text-center modal-footer text-center">
                 <button onclick="addcash()" class=" text-center btn btn-primary">اضافه</button> <button class="btn btn-light" data-bs-dismiss="modal">الغاء</button>

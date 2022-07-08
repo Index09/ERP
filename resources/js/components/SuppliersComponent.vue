@@ -158,7 +158,7 @@ export default {
             axios.get('/getsuppliers?page=' + page)
             .then(res => {
             this.suppliers = res.data.suppliers.data
-            this.laraveldata =res.data.suppliers
+            this.laraveldpata =res.data.suppliers
 
         })
         }
