@@ -31,5 +31,8 @@ class orderpackage extends Model
     public function sellorders(){
         return $this->hasMany(sellorder::class);
     }
+    public function offerprices(){
+        return $this->hasMany(sellorder::class);
+    }
     
 }

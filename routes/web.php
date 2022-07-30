@@ -39,6 +39,11 @@ Route::group(['middleware' => ['auth']], function() {
 
 
  
+//Offer prices
+
+Route::resource('offerprice',App\Http\Controllers\OfferpriceController::class);
+Route::get('/getofferprices', [App\Http\Controllers\OfferpriceController::class, 'getOfferprices'])->name('home');
+
 
 
 
@@ -49,7 +54,7 @@ Route::group(['middleware' => ['auth']], function() {
 
 Route::get('/customer', [App\Http\Controllers\CustomerController::class, 'create'])->name('create');
 Route::post('/customer_create', [App\Http\Controllers\CustomerController::class, 'customer_create'])->name('customer_create');
-Route::post('/getcustomer',[App\Http\Controllers\CustomerController::class, 'getcustomer'])->name('getcustomer');
+Route::get('/getcustomer',[App\Http\Controllers\CustomerController::class, 'getcustomer'])->name('getcustomer');
 Route::get('/customeraccouning',[App\Http\Controllers\CustomerController::class, 'customeraccouning'])->name('customeraccouning');
 Route::get('/getcustomerpayments/{id}',[App\Http\Controllers\CustomerController::class, 'getcustomerpayments'])->name('getcustomerpayments');
 Route::get('/customers',[App\Http\Controllers\CustomerController::class, 'view'])->name('view');
@@ -103,7 +108,7 @@ Route::post('/product', [App\Http\Controllers\ProductController::class, 'insert'
 Route::get('/getproducts', [App\Http\Controllers\ProductController::class, 'getproducts'])->name('getproducts');
 Route::post('/product_delete', [App\Http\Controllers\ProductController::class, 'product_delete'])->name('product_delete');
 
-
+Route::get('GetProductsSearch',[App\Http\Controllers\ProductController::class, 'GetProductsSearch'])->name('GetProductsSearch');
 //payment 
 
 

@@ -10,6 +10,9 @@ import Vue from 'vue';
 
 
 
+
+
+
 let moment = require("moment");
 moment.relativeTimeThreshold("s", 59);
 moment.relativeTimeThreshold("m", 59);
@@ -40,6 +43,8 @@ Vue.component('purchase-component', require('./components/PurchaseComponant.vue'
 
 
 Vue.component('sellorder-component', require('./components/SellOrderComponant.vue').default);
+Vue.component('offerprice-component', require('./components/OfferpriceComponant.vue').default);
+Vue.component('offerprices-component', require('./components/OfferpricesComponant.vue').default);
 
 
 Vue.component('sellorders-component', require('./components/SellOrdersComponant.vue').default);

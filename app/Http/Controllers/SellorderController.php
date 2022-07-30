@@ -53,7 +53,7 @@ class SellorderController extends Controller
              and orderpackage_id = ' . $orderpackage_id . '
 
 
-             GROUP BY day(created_at) ', ) //المفروض هنا ميتين ام مونث  بس انا بجرب بس !!
+             GROUP BY month(created_at) ', ) //المفروض هنا ميتين ام مونث  بس انا بجرب بس !!
         );
 
         return response()->json(['sellsmonths' => $sellmonths]);

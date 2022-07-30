@@ -45,4 +45,13 @@ class ProductController extends Controller
 
         return response()->json(200);
     }
+
+
+    public function GetProductsSearch(Request $request){
+
+        $products = product::select(['id','name','sell_price'])->where('orderpackage_id', auth()->user()->orderpackage->id)->where('name' ,'like',  '%' . $request->name . '%' )->take(10)->get();
+
+        return response()->json(['products' => $products],200);
+
+    }
 }

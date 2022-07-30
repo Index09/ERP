@@ -63,8 +63,8 @@ class customerController extends Controller
 
     public function getcustomer(Request $request)
     {
-
-        $customers = customer::where('name', 'like', '%' . $request->customername . '%')
+       
+        $customers = customer::where('name', 'like', '%' . $request->name . '%')
             ->where('orderpackage_id', auth()->user()->orderpackage_id)->take(10)
             ->withcount(['payments'])
             ->get();

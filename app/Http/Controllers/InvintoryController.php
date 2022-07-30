@@ -50,4 +50,3 @@ class InvintoryController extends Controller
 
 }
 
-/*

@@ -358,8 +358,15 @@
                                             <li><a href="/sellorderwpay" class="sub-slide-item">تقسيط</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="alerts.html" class="slide-item"> عرض سعر</a></li>
-
+                                    <li class="sub-slide">
+                                        <a class="sub-side-menu__item" data-bs-toggle="sub-slide"
+                                            href="javascript:void(0)"><span class="sub-side-menu__label">عرض سعر
+                                                </span><i class="sub-angle fe fe-chevron-right"></i></a>
+                                        <ul class="sub-slide-menu">
+                                            <li><a href="/offerprice/create" class="sub-slide-item">عرض سعر جديد </a></li>
+                                            <li><a href="/offerprice" class="sub-slide-item">عروض الاسعار</a></li>
+                                        </ul>
+                                    </li>
 
 
                                 </ul>
